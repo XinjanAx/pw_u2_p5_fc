@@ -1,21 +1,19 @@
 <template>
   <div id="div_u">
     <p>hola vue</p>
-    <deber-calcuadora/>
+    <pregunta/>
     <p>chao vue</p>
   </div>  
 </template>
 
 <script>
-import DeberCalcuadora from './components/DeberCalcuadora.vue';
+import Pregunta from './components/Pregunta.vue';
 export default {
   name: 'App',
   components: {
-    DeberCalcuadora
+    Pregunta
   },
-  methods:{
-
-  }
+ 
 }
 </script>
 
@@ -25,16 +23,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: rgba(255, 255, 255, 0.77);
+  color: rgba(0, 0, 0, 0.77);
   margin: 0;
   padding: 0;
 
-}
-body{
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./assets/fondo.png");
 }
 p{
   font-size: 30px;

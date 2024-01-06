@@ -19,7 +19,7 @@
                         Hex: &#x2190;
                         css:before \02190
                         alert(): \u2190-->
-                    <button @click="borrar()">&#8592</button>
+                    <button @click="borrar()">&#8592;</button>
 
                     <button @click="operacion('/')">/</button>
 
