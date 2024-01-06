@@ -1,25 +1,20 @@
 <template>
-  <h2>hola app</h2>
-  <img src="https://i.pinimg.com/originals/d2/23/d9/d223d948ba7dd7c538a969d712d64bfe.gif" alt="logo">
-  <Contador titulo="A" />
-  <Contador titulo="B" v-bind:valor='10'/>
-  <Contador titulo="C" :valor='calculo()'/>
-  <h2>chao app</h2>
+  <div id="div_u">
+    <p>hola vue</p>
+    <deber-calcuadora/>
+    <p>chao vue</p>
+  </div>  
 </template>
 
 <script>
-import Contador from './components/Contador.vue'
-
-
+import DeberCalcuadora from './components/DeberCalcuadora.vue';
 export default {
   name: 'App',
   components: {
-    Contador
+    DeberCalcuadora
   },
   methods:{
-    calculo(){
-      return 5*5;
-    }
+
   }
 }
 </script>
@@ -30,7 +25,20 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: rgba(255, 255, 255, 0.77);
+  margin: 0;
+  padding: 0;
+
+}
+body{
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/fondo.png");
+}
+p{
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 0 20px #9901aa;
 }
 </style>
