@@ -1,17 +1,17 @@
 <template>
   <div id="div_u">
-    <p>hola vue</p>
-    <pregunta/>
-    <p>chao vue</p>
+    <span>hola vue</span>
+    <pokeAPI/>
+    <span>chao vue</span>
   </div>  
 </template>
 
 <script>
-import Pregunta from './components/Pregunta.vue';
+import PokeAPI from './components/PokeAPI.vue';
 export default {
   name: 'App',
   components: {
-    Pregunta
+    PokeAPI
   },
  
 }
@@ -28,9 +28,10 @@ export default {
   padding: 0;
 
 }
-p{
+span{
   font-size: 30px;
   font-weight: bold;
+  color: whitesmoke;
   text-shadow: 0 0 20px #9901aa;
 }
 </style>
