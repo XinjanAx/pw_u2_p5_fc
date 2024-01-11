@@ -1,17 +1,15 @@
 <template>
 <div id="contenedor">
-    <img class="gojō" src="https://i.pinimg.com/originals/d2/23/d9/d223d948ba7dd7c538a969d712d64bfe.gif" alt="jujutsu">
-    <input type="text">
+    <img v-if="img" class="gojō" v-bind:src="img" alt="jujutsu">
     <div class="dark"></div>
     <div class="div_pre">
         <input v-model="pregunta" type="text">
         <p>Recuerda q debes parpadear y tomar awita</p>
-        <h2>{{pregunta}}</h2>
-        <h1>Si,No....</h1>
+        <div v-if="validacion">
+            <h2>{{pregunta}}</h2>
+            <p>{{respuesta}}</p>
+        </div>
     </div>
-    
-
-
 </div>
 </template>
 
@@ -19,7 +17,10 @@
 export default {
     data(){
         return{
-            pregunta: '¿Vas a tomar awita?'
+            pregunta: '',
+            respuesta: null,
+            img: null,
+            validacion:false
         }
     },
     watch:{
@@ -31,9 +32,13 @@ export default {
     },
     methods:{
         async consumirAPI(){
+            this.validacion= true;
+            this.respuesta='.';
             const {answer, image} = await fetch('https://yesno.wtf/api').then(ret=>ret.json())
-            console.log('answer: '+answer);
-            console.log('image: '+image);
+            this.respuesta='..';
+            this.respuesta='...';
+            this.respuesta = answer=='yes'?'SI':'NO';
+            this.img = image;
         }
     }
     
@@ -64,6 +69,7 @@ input{
     border-radius: 5px;
     border: none;
     background-color: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 20px rgba(140, 0, 255, 0.329);
 }
 
