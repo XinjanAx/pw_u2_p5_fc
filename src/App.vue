@@ -1,17 +1,17 @@
 <template>
   <div id="div_u">
     <span>hola vue</span>
-    <pokeAPI/>
+    <PokemonPage/>
     <span>chao vue</span>
   </div>  
 </template>
 
 <script>
-import PokeAPI from './components/PokeAPI.vue';
+import PokemonPage from './components/page/PokemonPage.vue';
 export default {
   name: 'App',
   components: {
-    PokeAPI
+    PokemonPage
   },
  
 }
