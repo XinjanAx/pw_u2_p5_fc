@@ -129,5 +129,22 @@ export default {
   margin: 0;
   padding: 0;
 }
-
+.pantalla{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin: 30px;
+    font-size: 20px;
+    width: 140px;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: none;
+}
+button:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
 </style>
