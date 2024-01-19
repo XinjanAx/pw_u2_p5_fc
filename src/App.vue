@@ -43,9 +43,9 @@ export default {
       url1:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
       url2:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
       url3:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
-      texto1:"xxxxxxxxxxxx",
-      texto2:"xxxxxxxxxxxx",
-      texto3:"xxxxxxxxxxxx",
+      texto1:"xxxxxxxxxxx",
+      texto2:"xxxxxxxxxxx",
+      texto3:"xxxxxxxxxxx",
       valodador:true,
       win: false,
       lose: false
@@ -134,7 +134,6 @@ export default {
     justify-content: center;
     align-items: center;
 }
-
 button{
     margin: 30px;
     font-size: 20px;
