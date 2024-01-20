@@ -1,20 +1,16 @@
 <template>
   <div class="div_opciones">
     <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>{{pokeid}}</li>
-        <li>4</li>       
+        <li v-for="pokeI in pokeArreglo" :key="pokeI.id" @click="$emit('clickOpcion',pokeI.id)">{{pokeI.nombre}}</li>
     </ul>
-
   </div>
 </template>
 
 <script>
 export default {
     props:{
-        pokeid:{
-            type: Number,
+        pokeArreglo:{
+            type: Array,
             required: true
         }
     },

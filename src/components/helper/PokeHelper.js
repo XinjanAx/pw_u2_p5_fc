@@ -3,7 +3,7 @@ const obtenerID = async ()=>{
     const pokeId2= obtenerAleatorio(600);
     const pokeId3= obtenerAleatorio(600);
     const pokeId4= obtenerAleatorio(600);
-    await obrenerPokemon(pokeId1,pokeId2,pokeId3,pokeId4);
+    return await obrenerPokemon(pokeId1,pokeId2,pokeId3,pokeId4);
 }
 const obrenerPokemon = async (p1,p2,p3,p4) =>{
     const n1 = await ConsultarPokeNombre(p1);
@@ -31,7 +31,7 @@ const obtenerAleatorio=(m)=>{
     return 1+Math.floor(Math.random()*m)
 }
 
-const obtenerIDFachada=()=>{
-    obtenerID();
+const obtenerIDFachada=async()=>{
+    return await obtenerID();
 }
 export default obtenerIDFachada
